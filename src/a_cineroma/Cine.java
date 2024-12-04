@@ -21,11 +21,13 @@ public Cine(String nombre, String direccion) {
     }
 //-----------------------------------------------------------------------------
 public void agregarPelicula(Pelicula peli){
+// Agrega una nueva película al conjunto de proyecciones del cine.    
 
     proyecciones.add(peli);
 }
 //----------------------------------------------------------------------------
 public void listarTodo(){
+// Muestra todas las películas en el conjunto de proyecciones.
 
     for (Pelicula p:proyecciones){
         System.out.println(p);
@@ -33,6 +35,7 @@ public void listarTodo(){
 }
 //----------------------------------------------------------------------------
 public void listarDuranMas(int h){
+// Lista las películas cuya duración es mayor a la indicada en horas.
 
     for (Pelicula p: proyecciones){
         if (p.getDuracion()> h){
@@ -42,7 +45,8 @@ public void listarDuranMas(int h){
 }
 //----------------------------------------------------------------------------
 public void listarMenorDuracionAMayorDuracion(){
-    
+// Lista las películas ordenadas de menor a mayor duración.
+
     ArrayList<Pelicula> ArrPeli = new ArrayList(proyecciones);   
     Comparator<Pelicula> MenorAMayorDuracion = new Comparator<Pelicula>(){@Override
     
@@ -60,6 +64,8 @@ public void listarMenorDuracionAMayorDuracion(){
 }
 //----------------------------------------------------------------------------
 public void listarOrdenadasPorTituloAZ(){
+// Lista las películas ordenadas alfabéticamente por título.
+
     ArrayList<Pelicula> ArrPeli = new ArrayList(proyecciones);   
 
    Comparator<Pelicula> OrdenadasPorTitulo = new Comparator<Pelicula>(){@Override
@@ -76,6 +82,8 @@ public void listarOrdenadasPorTituloAZ(){
 }
 //----------------------------------------------------------------------------
 public void listarOrdenadasPorDirectorAZ(){
+ // Lista las películas ordenadas alfabéticamente por director.
+ 
    ArrayList<Pelicula> ArrPeli = new ArrayList(proyecciones);   
    Comparator<Pelicula> OrdenadasPorDirector = new Comparator<Pelicula>(){@Override
     
